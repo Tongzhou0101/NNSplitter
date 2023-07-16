@@ -1,4 +1,3 @@
-# TODO: things to change( all args!)
 import numpy as np
 import torch.backends.cudnn as cudnn
 import torch
@@ -17,6 +16,7 @@ from torch.utils.data import TensorDataset
 from controller_rnn import *
 import matplotlib.pyplot as plt
 from utils import *
+# Change the import path to your own pre-trained models
 from pre_trained.cifar10_models.vgg import vgg11_bn, vgg13_bn, vgg16_bn, vgg19_bn
 from pre_trained.cifar10_models.resnet import resnet18, resnet34
 from pre_trained.cifar10_models.mobilenetv2 import mobilenet_v2
