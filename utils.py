@@ -124,8 +124,8 @@ def sparsity(mask,model,B,t):
         sum += mask[name].sum()
         # delta = [para.flatten()[i]-B for i in range(len(para.flatten())) if mask[name].flatten()[i] is True]
         change += abs(para.flatten()-B>t).sum()
-        weights = None
-        #weights.extend(para[mask[name].long()].detach().cpu().flatten()-B)
+        #weights = None
+        weights.extend(para[mask[name].long()].detach().cpu().flatten()-B)
 
     return weights, change, sum, change/sum
 
