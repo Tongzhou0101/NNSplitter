@@ -61,7 +61,7 @@ def modify_layer(layer_list,B,eps,pre_model,testloader,device):
 
     # for name, para in pre_model.named_parameters():
     #     if mask[name][44].sum() != 0:
-    #         print('utilis',name, para[44])
+    #         print('utils',name, para[44])
     #         print('mask',mask[name][44].sum())
     #         break
     return mask, tmp_dict, total, idx_list, ori_w, sum, layer_modi
