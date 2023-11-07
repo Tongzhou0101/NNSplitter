@@ -41,11 +41,16 @@ To start using NNSplitter, follow these steps:
 If you find this work or code helpful, please cite us:
 
 ```bibtex
-@inproceedings{zhou2023nnsplitter,
-  title={NNSplitter: An Active Defense Solution to DNN Model via Automated Weight Obfuscation},
-  author={Zhou, Tong and Luo, Yukui and Ren, Shaolei and Xu, Xiaolin},
-  booktitle={International Conference on Machine Learning},
-  year={2023},
-  organization={PMLR}
+@InProceedings{pmlr-v202-zhou23h,
+  title = 	 {{NNS}plitter: An Active Defense Solution for {DNN} Model via Automated Weight Obfuscation},
+  author =       {Zhou, Tong and Luo, Yukui and Ren, Shaolei and Xu, Xiaolin},
+  booktitle = 	 {Proceedings of the 40th International Conference on Machine Learning},
+  pages = 	 {42614--42624},
+  year = 	 {2023},
+  editor = 	 {Krause, Andreas and Brunskill, Emma and Cho, Kyunghyun and Engelhardt, Barbara and Sabato, Sivan and Scarlett, Jonathan},
+  volume = 	 {202},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {23--29 Jul},
+  publisher =    {PMLR}
 }
 ```
