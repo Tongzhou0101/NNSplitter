@@ -44,6 +44,23 @@ To start using NNSplitter, follow these steps:
    ```bash
    git clone https://github.com/Tongzhou0101/NNSplitter
 
+
+## Q & A
+
+**Q: How do I determine the hyperparameters \( c \) and epsilon?**
+
+**A:** These hyperparameters depend on the distribution of the model weights (see Figure 2), not on the model architecture. Therefore, the default hyperparameters may not be optimal for your specific model, and you may need to adjust them accordingly.
+
+In general, you can select \( c \) as the mean value of all convolutional layers’ weights to encourage weight obfuscation across various layers. Then, set epsilon to a small value, such as 1e-4. 
+
+You can use the `modify_layer` function in `utils.py` to test these hyperparameters. This will help you determine if you have selected enough weights for perturbations and to evaluate the obfuscation performance for normal users. The `modify_layer` function returns `(mask, tmp_dict, total, idx_list, ori_w, sum, layer_modi)`. You can check `sum` for the number of weight perturbations. 
+
+To load the new state dictionary, use `my_model.load_state_dict(update_dict)` and run inference to check accuracy. Note that the optimal values of \( c \) and epsilon are not unique; the effects of these values are detailed in Section 3.1.
+
+
+
+
+
 ## Cite
 
 If you find this work or code helpful, please cite us:
